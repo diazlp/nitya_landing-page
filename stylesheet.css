@@ -194,6 +194,7 @@ header .navbar {
 /* CONTACT FORM SECTION */
 
 .contact-us {
+  background-color: var(--neutral-color);
   padding-top: 9vh;
   text-align: center;
   padding-bottom: 3vh;
