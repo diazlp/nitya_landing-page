@@ -1,0 +1,290 @@
+/* ROOT SECTION */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+body {
+  height: 100%;
+
+  --neutral-color: #ffffff;
+  --nitya-orange: #fdad8c;
+  --nitya-main: #8ebaa9;
+  --nitya-dark-blue: #28645a;
+  --nitya-base: #fff9f3;
+
+  --input-padding: 12px 20px;
+
+  --alert-message: #f00;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* PORTALS SECTION */
+
+.portals {
+  position: fixed;
+  border-radius: 5px;
+  text-decoration: none;
+  line-height: 7vh;
+  z-index: 0;
+  font-size: 7vh;
+  bottom: 6vh;
+  right: 6vh;
+}
+
+.portals a {
+  text-decoration: none;
+  color: var(--nitya-dark-blue);
+}
+
+/* LANDING PAGE SECTION */
+
+.top-wrapper {
+  position: relative;
+  padding: 10px;
+  background: url("./assets/nitya-landing.png") no-repeat fixed center;
+  background-size: cover;
+  height: 100%;
+  z-index: 10;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-left a,
+.header-right a {
+  padding: 0 40px;
+  margin: 0 10px;
+  font-size: 20px;
+  line-height: 65px;
+  color: black;
+  display: inline-block;
+}
+
+.logo {
+  width: 130px;
+}
+
+.navbar-item {
+  font-weight: 400;
+}
+
+.navbar-item:hover {
+  border-bottom: 4px solid var(--nitya-orange);
+  font-weight: 600;
+}
+
+/* ABOUT US SECTION */
+
+.why-exist {
+  margin-bottom: 5vh;
+  text-align: center;
+  background-color: var(--neutral-color);
+}
+
+.why-exist h5,
+.offers h5 {
+  font-weight: lighter;
+  padding-top: 8vh;
+  text-transform: uppercase;
+  font-size: 2.8vh;
+  letter-spacing: 0.6em;
+}
+
+.why-exist h2,
+.offers h2 {
+  padding-top: 2.6vh;
+  text-transform: uppercase;
+  font-size: 5.4vh;
+  line-height: 6vh;
+  letter-spacing: 0.4em;
+}
+
+.why-exist p {
+  padding: 6vh;
+  margin: 0 8em;
+  font-size: 3vh;
+  line-height: 7vh;
+  letter-spacing: 0.09em;
+}
+
+/* OFFERS SECTION */
+
+.offers {
+  position: relative;
+  padding-top: 4vh;
+  text-align: center;
+  padding-bottom: 8vh;
+  background-color: var(--nitya-base);
+}
+
+.packages {
+  display: flex;
+  justify-content: center;
+}
+
+.package {
+  padding-top: 8vh;
+  width: 25%;
+}
+
+.package img {
+  width: 40vh;
+}
+
+.package .btn {
+  margin-top: 3vh;
+  padding-top: 2vh;
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+}
+
+.package .btn .order-btn {
+  border-radius: 5px;
+  background-color: var(--neutral-color);
+  border: 1px solid #000;
+  padding: 2.2vh 6vh;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  box-shadow: 5px 5px 11px #c2c2c2, -5px -5px 11px #ffffff;
+  user-select: none;
+}
+
+.package .btn .order-btn:hover {
+  background-color: var(--nitya-main);
+  transition-duration: 0.3s;
+}
+
+.package .btn .order-btn:active {
+  color: var(--neutral-color);
+  background-color: var(--nitya-main);
+  transition-duration: 0.1s;
+  background: #28645a;
+  box-shadow: inset 17px 17px 34px #1e4b44, inset -17px -17px 34px #327d71;
+}
+
+/* CONTACT FORM SECTION */
+
+.contact-us {
+  padding-top: 9vh;
+  text-align: center;
+  padding-bottom: 3vh;
+  margin-bottom: 5vh;
+}
+
+.contact {
+  margin: 0 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-item {
+  flex: 50%;
+}
+
+.contact-item h1 {
+  margin-bottom: 2vh;
+}
+
+form {
+  margin: 0 15vh;
+  padding-top: 3vh 5vh 0;
+  text-align: left;
+  /* display: block; */
+}
+
+form input {
+  width: 100%;
+  padding: var(--input-padding);
+  margin-bottom: 10px;
+}
+
+form textarea {
+  width: 100%;
+  height: 25vh;
+  padding: var(--input-padding);
+  margin-bottom: 2vh;
+}
+
+form .form-submit {
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--nitya-base);
+  border: 1px solid var(--nitya-dark-blue);
+}
+
+form .form-submit:hover {
+  transition: 0.3s;
+  background-color: var(--nitya-main);
+}
+
+/* MOTTO SECTION */
+
+.nitya-motto {
+  position: relative;
+  color: var(--neutral-color);
+  background-color: var(--nitya-dark-blue);
+  padding: 5vh 0;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  position: relative;
+  background-color: #000;
+}
+
+footer .copyright {
+  color: var(--neutral-color);
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+footer a {
+  color: var(--nitya-dark-blue);
+}
+
+/* EXTRAS SECTION */
+
+.submit-message {
+  text-align: center;
+  color: var(--alert-message);
+  font-weight: bold;
+}

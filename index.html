@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitya</title>
+    <link rel="icon" href="./assets/nityadp.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/533b9c4f79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="top-wrapper" id="top-elements">
+      <header>
+        <div class="container navbar">
+          <div class="header-left">
+            <a href="#about-us" class="navbar-item">About Us</a>
+            <a href="#offering" class="navbar-item">Our Offers</a>
+          </div>
+
+          <div class="header-middle">
+            <img src="./assets/nityadp.png" alt="nitya" class="logo" />
+          </div>
+
+          <div class="header-right">
+            <a href="#contact-us" class="navbar-item">Contact Us</a>
+            <a href="#nitya" class="navbar-item">#NITYA</a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="portals">
+      <div class="container">
+        <a href="#top-elements">
+          <i class="fas fa-angle-double-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="why-exist" id="about-us">
+      <div class="container">
+        <h5>about us</h5>
+        <h2>Why we Exist</h2>
+        <p>
+          Nowadays, there are countless of local beef with low nutritional value
+          due to the scarcity of high-nutritions feed that were given to them,
+          especially in Indonesia. Forage-worthy grass is getting more and more
+          difficult to find due to land conversion and climate change. Farmers
+          tend to bite their finger since cattle feed price is inflating while
+          their cattle quality keeps on declining. Hereby <b>NITYA</b> comes
+          with a mission. We thrive to solve this problem by offering affordable
+          cattle feed with higher nutritional value by utilizing the treasure of
+          our maritime nation, which is Seaweed. Our goal is to escalate the
+          quality of our local beef with cheaper prices. We also provide cattle
+          farming workshops and vet visits in one package of membership.
+        </p>
+      </div>
+    </div>
+
+    <div class="offers">
+      <div class="container">
+        <h5>high quality beef starts from you!</h5>
+        <h2 id="offering">What we offer</h2>
+
+        <div class="packages">
+          <div class="package">
+            <div>
+              <img src="./assets/nitya-economy.png" alt="economy-package" />
+            </div>
+
+            <div class="btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="order-btn">
+                <i class="fas fa-shopping-cart"></i>
+                &nbsp;order now
+              </span>
+            </div>
+          </div>
+
+          <div class="package">
+            <div>
+              <img src="./assets/nitya-safety.png" alt="safety-package" />
+            </div>
+
+            <div class="btn">
+              <span class="order-btn">
+                <i class="fas fa-shopping-cart"></i>
+                &nbsp;order now
+              </span>
+            </div>
+          </div>
+
+          <div class="package">
+            <div>
+              <img
+                src="./assets/nitya-convenient.png"
+                alt="convenient-package"
+              />
+            </div>
+
+            <div class="btn">
+              <span class="order-btn">
+                <i class="fas fa-shopping-cart"></i>&nbsp; order now
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us" id="contact-us">
+      <div class="container">
+        <div class="contact">
+          <div class="contact-item">
+            <div class="contact-img">
+              <img
+                src="./assets/nitya-3sacks.png"
+                alt="contact-image"
+                width="500"
+              />
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-form">
+              <h1>Contact Us</h1>
+
+              <form>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Write your message..."
+                ></textarea>
+
+                <input class="form-submit" type="submit" value="SUBMIT" />
+                <div class="submit-message"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nitya-motto">
+      <div>
+        <q
+          >Mewujudkan swasembada dan keberlanjutan daging sapi lokal
+          indonesia</q
+        >
+        - Nitya
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyright" id="nitya">
+        Copyright 2022
+        <a href="https://diazlp-portofolio.netlify.app/" target="_blank"
+          >Nitya</a
+        >
+        &copy; all rights reserved
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      const renderAlert = (timer) => `
+        Redirecting to Instagram in ${timer}
+        `;
+
+      document.querySelector(".form-submit").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let timer = 3;
+        let countdown = setInterval(() => {
+          document.querySelector(".submit-message").innerHTML =
+            renderAlert(timer);
+
+          timer--;
+
+          if (timer === -1) {
+            window.open(
+              "https://www.instagram.com/nityaofficial.id/",
+              "_blank"
+            );
+            document.querySelector(".submit-message").innerHTML = "";
+            clearInterval(countdown);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
